@@ -1,13 +1,14 @@
 @import 'tailwindcss';
 
+@theme {
+  --breakpoint-xs : 520px;
+}
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body,html{
+body,html, #root{
     height: 100%;
     width: 100%;
 }
