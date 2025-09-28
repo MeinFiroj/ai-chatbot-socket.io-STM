@@ -45,9 +45,9 @@ const UI = () => {
       <h2 className="text-center bg-linear-to-r from-fuchsia-500 to-purple-700 text-white py-2 text-xl font-medium">
         AI Chat-Bot
       </h2>
-      <div className="relative h-full w-full p-2 flex flex-col gap-2 items-start justify-start overflow-y-auto">
+      <div className="relative h-[85%] w-full p-2 flex flex-col gap-2 items-start justify-start overflow-y-auto pb-[3%] chat-screen">
         {allMessages.length === 0 ? (
-          <p className="absolute top-[42%] left-[50%] translate-[-50%] opacity-70 text-purple-900 select-none">
+          <p className="absolute top-[50%] left-[50%] translate-[-50%] opacity-70 text-purple-900 select-none">
             Start a new conversation
           </p>
         ) : (
@@ -61,14 +61,11 @@ const UI = () => {
                     : "bg-white rounded-tl-none mt-2"
                 } rounded-2xl shadow shadow-black/30 py-2 px-3 w-fit max-w-[80%]`}
               >
-                <p>
-                  {" "}
-                  {msg.sender === "user" ? (
-                    msg.text
-                  ) : (
-                    <Markdown>{msg.text}</Markdown>
-                  )}{" "}
-                </p>
+                {msg.sender === "user" ? (
+                  <p>{msg.text}</p>
+                ) : (
+                  <Markdown>{msg.text}</Markdown>
+                )}
               </div>
             );
           })

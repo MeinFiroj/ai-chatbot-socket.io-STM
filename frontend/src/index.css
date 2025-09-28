@@ -12,3 +12,18 @@ body,html, #root{
     height: 100%;
     width: 100%;
 }
+
+.chat-screen::-webkit-scrollbar{
+  background-color: transparent;
+  width: 10px;
+}
+
+.chat-screen::-webkit-scrollbar-thumb{
+  background: linear-gradient(to bottom, rgb(206, 3, 192), rgb(251, 73, 251) );
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+code{
+  text-wrap: wrap;
+}
